@@ -1,0 +1,195 @@
+// ===============================================
+// Header
+// ===============================================
+header {
+  @include size(100%, 100%);
+
+  .xl-navbar {
+    @include size(100%, auto);
+    min-block-size: 80px;
+    position: absolute;
+    top: 0;
+    background-color: $white;
+    padding-block: 1rem;
+    box-shadow: 0px 4px 26px 0px #c8c8c88c;
+    z-index: 1000;
+
+    #close-nav {
+      display: none;
+    }
+    @include media(md) {
+      display: block;
+      min-block-size: 100vh;
+      transform: translateX(-100%);
+
+      #close-nav {
+        display: block;
+        position: absolute;
+        inset-block-start: 2rem;
+        inset-inline-end: 2rem;
+        font-size: 2rem;
+        color: $mainColor;
+      }
+
+      &.active {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .container {
+    @include size(100%, auto);
+    @include flex(space-between, center, row);
+    z-index: 100;
+
+    .brand {
+      img {
+        @include size(150px, 40px);
+      }
+    }
+
+    .navbar {
+      .nav-list {
+        @include flex(center, center, row);
+        gap: 2rem;
+
+        .nav-item {
+          a {
+            @include flex(center, center, column);
+            gap: 0.5rem;
+
+            img {
+              @include size(1.875rem, 1.875rem);
+              @extend .filter-grey;
+            }
+
+            p {
+              @include font(500, 1rem, $grey);
+              text-transform: capitalize;
+            }
+          }
+          &:hover,
+          &.active {
+            a {
+              img {
+                @extend .filter-main-color;
+              }
+              p {
+                color: $mainColor;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .nav-tail {
+      @include flex(center, center, row);
+      gap: 1.5rem;
+
+      .icon {
+        position: relative;
+        img {
+          @include size(1.875rem, 1.875rem);
+          @extend .filter-grey;
+        }
+        .badge {
+          position: absolute;
+          background-color: $mainColor;
+          @include font(500, 0.8rem, $white);
+          @include size(1.2rem, 1.2rem);
+          @include flex(center, center, row);
+          border-radius: 50%;
+          inset-inline-end: 0;
+          inset-block-start: 0;
+          transform: translateX(50%);
+        }
+      }
+
+      .avatar {
+        @include size(2.8rem, 2.8rem);
+        border-radius: 50%;
+        border: 3px solid $mainColor;
+        img {
+          @include size(100%, 100%);
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .md-navbar {
+    @include size(100%, auto);
+    min-block-size: 80px;
+    background-color: $white;
+    padding-block: 1rem;
+    box-shadow: 0px 4px 26px 0px #c8c8c88c;
+    display: none;
+
+    .container {
+      @include flex(space-between, center, row);
+      @include size(100%, auto);
+
+      #bars {
+        font-size: 2rem;
+        color: $mainColor;
+      }
+    }
+
+    @include media(md) {
+      display: block;
+      @include flex(space-between, center, row);
+    }
+  }
+
+  @include media(md) {
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+
+    .container {
+      @include flex(flex-start, center, column);
+      gap: 2rem;
+
+      .navbar {
+        inline-size: 100%;
+        order: 1;
+
+        .nav-list {
+          @include flex(center, flex-start, column);
+          inline-size: 100%;
+          gap: 1rem;
+          margin-inline: 1rem;
+
+          .nav-item {
+            @include size(100%, auto);
+            @include flex(flex-start, center, row);
+
+            a {
+              padding: 1rem;
+              flex-direction: row;
+            }
+
+            &:hover,
+            &.active {
+              background-color: $mainColor;
+              @include size(100%, auto);
+              border-radius: 0.5rem;
+
+              a {
+                img {
+                  filter: brightness(0) saturate(100%) invert(100%) sepia(10%)
+                    saturate(0%) hue-rotate(114deg) brightness(113%)
+                    contrast(100%);
+                }
+                p {
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

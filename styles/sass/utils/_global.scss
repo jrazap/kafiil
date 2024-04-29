@@ -1,0 +1,49 @@
+// ===============================================
+// FONTS
+// ===============================================
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// ===============================================
+// Global
+// ===============================================
+::selection {
+  background: $mainColor;
+  color: $white;
+}
+
+::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @include none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  min-block-size: 100vh;
+  background-color: $white;
+  color: $black;  
+}
+
+ul {
+  @include reset-list;
+  margin-block-end: 0 !important;
+  padding-inline: 0 !important;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+p {
+  margin-bottom: 0 !important;
+  font-size: 0.9rem;
+  @include media(md) {
+    font-size: 0.8rem;
+  }
+}
