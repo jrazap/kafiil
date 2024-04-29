@@ -107,9 +107,29 @@
               <img src="./assets/nav-icons/bell.svg" alt="" />
               <span class="badge">10</span>
             </div>
-            <div class="avatar">
-              <img src="./assets/avatars/avatar-01.svg" alt="" />
-              <div class="dropdown-menu"></div>
+            <div class="avatar dropdown">
+              <div
+                class="dropdown-toggle"
+                type="button"
+                id="avatar-dropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="./assets/avatars/avatar-01.svg" alt="avatar" />
+              </div>
+              <ul
+                class="dropdown-menu dropdown-menu-lg-end"
+                aria-labelledby="avatar-dropdown"
+              >
+                <div class="user-info">
+                  <img src="./assets/avatars/avatar-01.svg" alt="avatar" />
+                  <div class="info">
+                    <p class="name">Mohamed Elazap</p>
+                    <p class="role">Frontend Developer</p>
+                  </div>
+                </div>
+                <li><a class="dropdown-item" href="#">Action</a></li>
+              </ul>
             </div>
           </div>
         </div>
