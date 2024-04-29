@@ -110,27 +110,35 @@ header {
         @include size(2.8rem, 2.8rem);
         border-radius: 50%;
         border: 3px solid $mainColor;
+
         img {
           @include size(100%, 100%);
           object-fit: cover;
         }
-        .dropdown-toggle::after {
-          content: none;
+
+        .dropdown-toggle {
+          &::after {
+            content: none;
+          }
         }
+
         .dropdown-menu {
           inset-block-start: 0.5rem !important;
-          inline-size: 15rem;
+          min-inline-size: 20rem;
           padding: 0.5rem !important;
+
           .user-info {
-            @include flex(flex-sart, center, row);
+            @include flex(flex-start, center, row);
             padding-block-end: 0.5rem;
             border-block-end: 1px solid $grey-50;
             gap: 1rem;
+
             img {
               @include size(2.8rem, 2.8rem);
               border-radius: 50%;
               border: 3px solid $mainColor;
             }
+
             .info {
               .name {
                 @include font(700, 0.9rem, #1e1e1e);
@@ -140,9 +148,123 @@ header {
               }
             }
           }
+
           .menu-item {
-            padding-block-end: 0.5rem;
-            border-block-end: 1px solid $grey-50;
+            a {
+              @include flex(flex-start, center, row);
+              @include font(500, 0.875rem, $grey-500);
+              padding-block: 0.5rem;
+              border-block-end: 1px solid $grey-50;
+              gap: 0.5rem;
+
+              img {
+                @include size(2rem, 2rem);
+                border-radius: 50%;
+              }
+
+              &:hover {
+                img {
+                  @extend .filter-main-color;
+                }
+                span {
+                  text-transform: capitalize;
+                  color: $mainColor;
+                }
+              }
+            }
+          }
+
+          .dark-mode,
+          .language a {
+            @include flex(space-between, center, row);
+            padding-block: 0.5rem;
+
+            img {
+              @include size(2rem, 2rem);
+              border-radius: 50%;
+            }
+            span {
+              @include font(500, 0.875rem, $grey-500);
+            }
+          }
+
+          .language {
+            .flag {
+              img {
+                @include size(1.5rem, 1rem);
+                border-radius: 0;
+                padding-inline-start: .2rem;
+
+              }
+              span {
+                @include font(500, 0.875rem, $black);
+                font-family: "Cairo", sans-serif;
+                padding-inline-end: .2rem;
+                border-inline-end: 1px solid $grey;
+              }
+            }
+            &:hover {
+              .icon {
+                @extend .filter-main-color;
+              }
+              span {
+                text-transform: capitalize;
+                color: $mainColor;
+              }
+            }
+          }
+        }
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+          input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            &:checked + .slider {
+              background-color: $mainColor;
+            }
+            &:focus + .slider {
+              box-shadow: 0 0 1px $mainColor;
+            }
+            &:checked + .slider {
+              &:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+              }
+            }
+          }
+
+          .slider {
+            position: absolute;
+            cursor: pointer;
+            inset: 0 0 0 0;
+            background-color: #ccc;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+
+            &:before {
+              position: absolute;
+              content: "";
+              height: 26px;
+              width: 26px;
+              left: 4px;
+              bottom: 4px;
+              background-color: white;
+              -webkit-transition: 0.4s;
+              transition: 0.4s;
+            }
+
+            &.round {
+              border-radius: 34px;
+              &:before {
+                border-radius: 50%;
+              }
+            }
           }
         }
       }
