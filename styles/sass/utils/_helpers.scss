@@ -4,11 +4,25 @@
   text-transform: capitalize;
 }
 
+.shadow-box {
+  background-color: $white;
+  padding: 1rem !important;
+  border-radius: 1rem;
+  box-shadow: $boxShadow;
+}
+
 // ===============================================
 // Colors
 // ===============================================
 .bg-grey-50 {
-  background-color: $grey-50;
+  background-color: $grey-200;
+}
+
+.fa-star {
+  color: $grey-200;
+  &.gold {
+    color: $gold;
+  }
 }
 
 // ===============================================
@@ -18,10 +32,12 @@
   @include size(100%, 2.5rem);
   @include font(500, 1rem, $white);
   @include flex(center, center, row);
-  display: inline-block;
   border-radius: 0.5rem;
   background-color: $mainColor;
   outline: none;
+  @include media(sm) {
+    font-size: 0.8rem;
+  }
 }
 
 // ===============================================
