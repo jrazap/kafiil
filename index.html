@@ -8,13 +8,20 @@
       href="./assets/kaf-logo.svg"
       type="image/x-icon"
     />
+    <!-- BOOTSTRAP CSS-->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     />
+    <!-- FONTAWESOME CSS-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- FLICKITY CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
     <link rel="stylesheet" href="./styles/css/main.css" />
     <title>Kafiil | Home</title>
@@ -164,7 +171,7 @@
                     </div>
                     <div class="flag">
                       <span>العربية</span>
-                      <img src="./assets/nav-icons/saudi-flag.png" alt="">
+                      <img src="./assets/nav-icons/saudi-flag.png" alt="" />
                     </div>
                   </a>
                 </li>
@@ -186,7 +193,174 @@
     </header>
 
     <!-- MAIN -->
-    <main></main>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="content col-lg-9">
+            <section class="slider-container mb-3">
+              <div class="slider-title mb-3">
+                <p class="sub-title">Design / Logo Design</p>
+                <h3 class="title">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam
+                  nisi, cras neque Lorem ipsum dolor sit amet.
+                </h3>
+                <div class="rating">
+                  <div class="stars">
+                    <i class="fas fa-star gold"></i>
+                    <i class="fas fa-star gold"></i>
+                    <i class="fas fa-star gold"></i>
+                    <i class="fas fa-star gold"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.1 (500)</span>
+                  </div>
+                  <div class="actions">
+                    <a href="#">
+                      <img src="./assets/icons/share.svg" alt="" />
+                    </a>
+                    <a href="#">
+                      <img src="./assets/icons/heart.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slider mb-5" id="hero-slider">
+                <div class="item">
+                  <img src="./assets/banner.png" alt="" />
+                </div>
+                <div class="item">
+                  <img src="./assets/banner.png" alt="" />
+                </div>
+                <div class="item">
+                  <img src="./assets/banner.png" alt="" />
+                </div>
+              </div>
+            </section>
+
+            <section class="description mb-5">
+              <h3 class="title">description</h3>
+              <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam
+                nisi, cras neque Lorem ipsum dolor sit amet, Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit. Diam nisi, cras neque
+                Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Diam nisi, cras neque Lorem ipsum
+                dolor sit amet, Lorem ipsum dolor sit amet. Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit. Diam nisi, cras neque
+                Lorem ipsum dolor sit amet.
+              </p>
+            </section>
+
+            <section class="adds-on mb-5">
+              <form id="adds-form">
+                <div class="form-header">
+                  <h3 class="title">Services adds on</h3>
+                  <div class="select-all-container">
+                    <input type="checkbox" name="select-all" id="select-all" />
+                    <label for="select-all">Select All</label>
+                  </div>
+                </div>
+                <div class="form-body mb-5">
+                  <div class="item">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      class="service-checkbox"
+                      id="serviceOne"
+                      data-price="100"
+                    />
+                    <label for="serviceOne">
+                      <div class="service__header">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Diam nisi, cras neque Lorem ipsum dolor sit
+                          amet, Lorem ipsum dolor sit amet.
+                        </p>
+                      </div>
+                      <div class="service__footer">
+                        <ul class="badges">
+                          <li class="badge-item">100$</li>
+                          <li class="badge-item">2 days</li>
+                        </ul>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="item">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      class="service-checkbox"
+                      id="serviceTwo"
+                      data-price="200"
+                    />
+                    <label for="serviceTwo">
+                      <div class="service__header">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Diam nisi, cras neque Lorem ipsum dolor sit
+                          amet, Lorem ipsum dolor sit amet.
+                        </p>
+                      </div>
+                      <div class="service__footer">
+                        <ul class="badges">
+                          <li class="badge-item">200$</li>
+                          <li class="badge-item">2 days</li>
+                        </ul>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="item">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      class="service-checkbox"
+                      id="serviceThree"
+                      data-price="300"
+                    />
+                    <label for="serviceThree">
+                      <div class="service__header">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Diam nisi, cras neque Lorem ipsum dolor sit
+                          amet, Lorem ipsum dolor sit amet.
+                        </p>
+                      </div>
+                      <div class="service__footer">
+                        <ul class="badges">
+                          <li class="badge-item">300$</li>
+                          <li class="badge-item">2 days</li>
+                        </ul>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-footer col-12">
+                  <h3 class="title">Purchase Service</h3>
+                  <div class="total">
+                    <div class="row">
+                      <div class="col-8">
+                        <div class="boxes">
+                          <div class="text-box">
+                            <span id="selectedServices">0</span>
+                          </div>
+                          <div class="text-box w-50">
+                            <span id="totalPrice">0$</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <button type="submit" class="btn">Purchase</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </section>
+          </div>
+          <div class="sidebar col-lg-3">sidebar</div>
+        </div>
+      </div>
+    </main>
 
     <!-- FOOTER -->
     <footer></footer>
@@ -194,6 +368,7 @@
     <!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

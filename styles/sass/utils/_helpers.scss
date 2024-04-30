@@ -1,17 +1,32 @@
+.title {
+  @include font(600, 24px, $black);
+  margin-block-end: 1rem;
+  text-transform: capitalize;
+}
+
+// ===============================================
+// Colors
+// ===============================================
+.bg-grey-50 {
+  background-color: $grey-50;
+}
+
 // ===============================================
 // Buttons
 // ===============================================
 .btn {
-  @include size(auto, 2.5rem);
+  @include size(100%, 2.5rem);
+  @include font(500, 1rem, $white);
+  @include flex(center, center, row);
   display: inline-block;
-  padding: 0.625rem 1.25rem;
   border-radius: 0.5rem;
   background-color: $mainColor;
+  outline: none;
 }
+
 // ===============================================
 // Filters
 // ===============================================
-
 .filter-white {
   filter: brightness(0) saturate(100%) invert(100%) sepia(10%) saturate(0%)
     hue-rotate(114deg) brightness(113%) contrast(100%);
