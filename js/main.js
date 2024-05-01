@@ -51,3 +51,15 @@ $(document).ready(() => {
   //   e.preventDefault();
   // });
 });
+
+// ===============================================
+// TOGGLE LIKE
+// ===============================================
+$(document).ready(() => {
+  $(".like").on("click", (e) => {
+    $(e.target).toggleClass("liked");
+  });
+  $(".like img").on("click", (e) => {
+    $(e.target).parent().toggleClass("liked");
+  });
+});
