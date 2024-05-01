@@ -162,14 +162,29 @@ header {
                 @include size(2rem, 2rem);
                 border-radius: 50%;
               }
+              span {
+                text-transform: capitalize;
+              }
 
               &:hover {
                 img {
                   @extend .filter-main-color;
                 }
                 span {
-                  text-transform: capitalize;
                   color: $mainColor;
+                }
+              }
+            }
+            &.logout {
+              a {
+                border-block-end: none;
+                padding-block-end: 0;
+                img {
+                  @extend .filter-red-300;
+                }
+                span {
+                  text-transform: capitalize;
+                  color: $error-300;
                 }
               }
             }
@@ -194,13 +209,12 @@ header {
               img {
                 @include size(1.5rem, 1rem);
                 border-radius: 0;
-                padding-inline-start: .2rem;
-
+                padding-inline-start: 0.2rem;
               }
               span {
                 @include font(500, 0.875rem, $black);
                 font-family: "Cairo", sans-serif;
-                padding-inline-end: .2rem;
+                padding-inline-end: 0.2rem;
                 border-inline-end: 1px solid $grey;
               }
             }

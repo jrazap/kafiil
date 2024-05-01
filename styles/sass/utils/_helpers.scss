@@ -1,9 +1,9 @@
 .title {
-  @include font(600, 1.5rem, $black);
+  @include font(600, 1.2rem, $black);
   margin-block-end: 1rem;
   text-transform: capitalize;
   @include media(md) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -54,9 +54,16 @@
   @include size(100%, 2.5rem);
   @include font(500, 1rem, $white);
   @include flex(center, center, row);
+  @include none;
   border-radius: 0.5rem;
   background-color: $mainColor;
-  outline: none;
+  &:focus {
+    @include none;
+  }
+  &:hover {
+    color: $white;
+    background-color: $grey-500;
+  }
   @include media(sm) {
     font-size: 0.8rem;
   }
@@ -80,7 +87,12 @@
     hue-rotate(104deg) brightness(94%) contrast(77%);
 }
 
-.filter-red {
+.filter-red-500 {
   filter: brightness(0) saturate(100%) invert(51%) sepia(63%) saturate(4434%)
     hue-rotate(331deg) brightness(104%) contrast(107%);
+}
+
+.filter-red-300 {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(100%) saturate(1489%)
+    hue-rotate(334deg) brightness(98%) contrast(97%);
 }
