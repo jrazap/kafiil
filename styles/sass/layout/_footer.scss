@@ -2,5 +2,29 @@
 // Footer
 // ===============================================
 footer {
-  
+  border-block-start: 1px solid $grey-200;
+  .container {
+    @include flex(space-between, center, row);
+    padding-block: 1rem;
+    .copyrights {
+      @include font(500, 1rem, $black);
+      a {
+        color: $mainColor;
+      }
+    }
+    .logo {
+      @include size(5rem, auto);
+      img {
+        @include size(100%, auto);
+        object-fit: contain;
+      }
+    }
+    @include media(sm) {
+      flex-direction: column;
+      gap: 1rem;
+      .copyrights {
+        font-size: 0.8rem;
+      }
+    }
+  }
 }
