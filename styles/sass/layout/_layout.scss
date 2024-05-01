@@ -223,9 +223,9 @@ main {
 
             .total {
               .row {
-                @include media(sm) {
-                  flex-direction: column;
+                @include media(md) {
                   gap: 1rem;
+                  flex-direction: column;
                 }
               }
               .boxes {
