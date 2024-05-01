@@ -61,14 +61,14 @@
   @include font(500, 1rem, $white);
   @include flex(center, center, row);
   @include none;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   background-color: $mainColor;
   &:focus {
     @include none;
   }
   &:hover {
     color: $white;
-    background-color: $grey-500;
+    background-color: $theme-color-hover;
   }
   @include media(sm) {
     font-size: 0.8rem;
