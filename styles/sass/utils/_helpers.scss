@@ -1,7 +1,10 @@
 .title {
-  @include font(600, 24px, $black);
+  @include font(600, 1.5rem, $black);
   margin-block-end: 1rem;
   text-transform: capitalize;
+  @include media(md) {
+    font-size: 1.2rem;
+  }
 }
 
 .shadow-box {
@@ -18,8 +21,15 @@
   padding: 1rem;
   border-radius: 1rem;
   &:focus {
-  background-color: $grey-50;
-  @include none;
+    background-color: $grey-50;
+    @include none;
+  }
+}
+
+.avatar {
+  img {
+    @include size(2.5rem, 2.5rem);
+    object-fit: cover;
   }
 }
 

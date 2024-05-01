@@ -231,10 +231,7 @@ main {
         }
       }
 
-      .rating {
-        .title {
-        }
-
+      .service-rating {
         .rates {
           .item {
             @include flex(space-between, center, row);
@@ -278,13 +275,6 @@ main {
               margin-block-end: 1rem;
             }
 
-            .avatar {
-              img {
-                @include size(2.5rem, 2.5rem);
-                object-fit: cover;
-              }
-            }
-
             .details {
               @include size(100%, auto);
               .name {
@@ -298,6 +288,59 @@ main {
               }
               .message {
                 @include font(400, 0.875rem, $black);
+              }
+            }
+          }
+        }
+      }
+    }
+    .suggested-services {
+      .row {
+        row-gap: 1.5rem;
+        .item {
+          padding: 0 !important;
+
+          .item-image {
+            @include size(100%, 12rem);
+            img {
+              border-radius: 1rem 1rem 0 0;
+              @include size(100%, 100%);
+              object-fit: cover;
+            }
+          }
+          .details {
+            padding: 1rem;
+            .item-title {
+              @include font(600, 1rem, $black);
+              @include lines(2);
+              margin-block-end: 0.5rem;
+            }
+            .icons {
+              @include flex(flex-start, center, row);
+              margin-block-end: 1rem;
+              .icon {
+                .fa-shopping-cart {
+                  color: $grey-400;
+                }
+                span {
+                  @include font(600, 0.875rem, $grey-400);
+                }
+              }
+            }
+            .item-footer {
+              @include flex(space-between, center, row);
+              .user {
+                @include flex(flex-start, center, row);
+                gap: 0.2rem;
+                .avatar {
+                  img {
+                    border-radius: 50%;
+                    @include size(1.5rem, 1.5rem);
+                  }
+                }
+                .name {
+                  @include font(600, 12px, $black);
+                }
               }
             }
           }
