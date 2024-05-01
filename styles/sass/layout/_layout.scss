@@ -104,6 +104,9 @@ main {
         margin-block-end: 1.5rem;
         .text {
           @include font(500, 1rem, $grey-800);
+          @include media(sm) {
+            font-size: 0.8rem;
+          }
         }
       }
 
@@ -135,6 +138,9 @@ main {
                   inset-block-start: 0;
                   transform: translate(-100%, -50%);
                   cursor: pointer;
+                  @include media(sm) {
+                    @include size(1rem, 1rem);
+                  }
                 }
 
                 &:checked {
@@ -149,7 +155,7 @@ main {
               }
 
               label {
-                @include font(500, 18px, $grey-300);
+                @include font(500, 1rem, $grey-300);
                 cursor: pointer;
               }
             }
@@ -202,6 +208,9 @@ main {
                     background-color: $primary-100;
                     padding: 10px 5px 10px 5px;
                     border-radius: 0.5rem;
+                    @include media(sm) {
+                      font-size: 0.8rem;
+                    }
                   }
                 }
               }
@@ -249,6 +258,9 @@ main {
               @include font(500, 1rem, $black);
               inline-size: 100%;
               gap: 0.5rem;
+              @include media(sm) {
+                font-size: 0.8rem;
+              }
             }
             .rate {
               @include flex(flex-end, center, row);
@@ -256,6 +268,9 @@ main {
               inline-size: 100%;
               .stars {
                 inline-size: 50%;
+                @include media(sm) {
+                  inline-size: 80%;
+                }
               }
               .progress {
                 @include size(100%, 0.5rem);
@@ -288,7 +303,7 @@ main {
                 }
               }
               .message {
-                @include font(400, 0.875rem, $black);
+                @include font(400, 0.8rem, $black);
               }
             }
           }
@@ -380,6 +395,9 @@ main {
         .about {
           @include font(500, 14px, $grey-800);
           @include lines(3);
+          @include media(sm) {
+            text-align: center;
+          }
         }
       }
 
