@@ -238,25 +238,33 @@ main {
         .rates {
           .item {
             @include flex(space-between, center, row);
+            gap: 1rem 3rem;
+            @include media(md) {
+              flex-direction: column;
+            }
             &:not(:last-of-type) {
               margin-block-end: 1rem;
             }
 
             .text {
+              @include flex(flex-start, center, row);
               @include font(500, 1rem, $black);
-              span {
-              }
-              i {
-              }
+              inline-size: 100%;
+              gap: 0.5rem;
             }
             .rate {
               @include flex(flex-end, center, row);
               gap: 1rem;
+              inline-size: 100%;
               .stars {
+                inline-size: 50%;
               }
-              .prograss-bar {
-              }
-              .number {
+              .progress {
+                @include size(100%, 0.5rem);
+                background-color: $grey-200;
+                .progress-bar {
+                  background-color: $gold;
+                }
               }
             }
           }
@@ -278,6 +286,7 @@ main {
             }
 
             .details {
+              @include size(100%, auto);
               .name {
                 @include font(700, 0.875rem, $black);
               }

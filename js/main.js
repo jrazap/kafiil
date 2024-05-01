@@ -47,7 +47,7 @@ $(document).ready(() => {
     }
   });
 
-  $("#adds-form").on("submit", (e) => {
-    e.preventDefault();
-  });
+  // $("#adds-form, #review-form").on("submit", (e) => {
+  //   e.preventDefault();
+  // });
 });

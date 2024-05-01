@@ -11,6 +11,18 @@
   box-shadow: $boxShadow;
 }
 
+.form-control {
+  @include size(100%, auto);
+  @include none;
+  background-color: $grey-50;
+  padding: 1rem;
+  border-radius: 1rem;
+  &:focus {
+  background-color: $grey-50;
+  @include none;
+  }
+}
+
 // ===============================================
 // Colors
 // ===============================================
