@@ -134,6 +134,7 @@ main {
                   @include size(1.25rem, 1.25rem);
                   position: absolute;
                   background-image: url("../../assets/icons/check.svg");
+                  background-size: contain;
                   inset-inline-start: -0.5rem;
                   inset-block-start: 0;
                   transform: translate(-100%, -50%);
