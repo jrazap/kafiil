@@ -46,7 +46,8 @@ main {
           .flickity-page-dots {
             bottom: 1rem;
 
-            .dot {
+            .flickity-page-dot {
+              @include none;
               width: 12px;
               height: 12px;
               opacity: 1;
