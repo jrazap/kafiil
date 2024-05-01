@@ -129,7 +129,7 @@ main {
                   content: "";
                   @include size(1.25rem, 1.25rem);
                   position: absolute;
-                  background-image: url("/assets/icons/check.svg");
+                  background-image: url("../../assets/icons/check.svg");
                   inset-inline-start: -0.5rem;
                   inset-block-start: 0;
                   transform: translate(-100%, -50%);
@@ -178,7 +178,7 @@ main {
 
                 &:checked {
                   &::after {
-                    background-image: url("/assets/icons/checked.svg");
+                    background-image: url("../../assets/icons/checked.svg");
                     background-size: cover;
                     border-color: $white;
                   }
