@@ -134,11 +134,12 @@ header {
           inset-block-start: 0.5rem !important;
           min-inline-size: 20rem;
           padding: 0.5rem !important;
+          background-color: var(--action-bg-color);
 
           .user-info {
             @include flex(flex-start, center, row);
             padding-block-end: 0.5rem;
-            border-block-end: 1px solid var(--grey-50);
+            border-block-end: 1px solid var(--border-color);
             gap: 1rem;
 
             img {
@@ -149,7 +150,7 @@ header {
 
             .info {
               .name {
-                @include font(700, 0.9rem, #1e1e1e);
+                @include font(700, 0.9rem, var(--text-color));
               }
               .role {
                 @include font(400, 0.75rem, var(--grey));
@@ -160,9 +161,9 @@ header {
           .menu-item {
             a {
               @include flex(flex-start, center, row);
-              @include font(500, 0.875rem, var(--grey-500));
+              @include font(500, 0.875rem, var(--text-color));
               padding-block: 0.5rem;
-              border-block-end: 1px solid var(--grey-50);
+              border-block-end: 1px solid var(--border-color);
               gap: 0.5rem;
 
               img {
@@ -182,6 +183,7 @@ header {
                 }
               }
             }
+
             &.logout {
               a {
                 border-block-end: none;
@@ -207,7 +209,7 @@ header {
               border-radius: 50%;
             }
             span {
-              @include font(500, 0.875rem, var(--grey-500));
+              @include font(500, 0.875rem, var(--text-color));
             }
           }
 
