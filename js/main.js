@@ -64,7 +64,31 @@ $(document).ready(() => {
 // TOGGLE THEMES
 // ===============================================
 $(document).ready(() => {
+  let theme = sessionStorage.getItem("theme");
+
+  let checkTheme = () => {
+    if (theme == "dark") {
+      $("body").addClass("theme-dark");
+      window.sessionStorage.setItem("theme", "dark");
+      $("#theme-switch").attr("checked", true);
+    } else if (theme == null || theme == "dark") {
+      window.sessionStorage.setItem("theme", "light");
+      $("#theme-switch").attr("checked", false);
+    }
+  };
+  checkTheme();
+
+  let changeTheme = () => {
+    if (theme == "dark") {
+      $("body").removeClass("theme-dark");
+      window.sessionStorage.setItem("theme", "light");
+    } else if (theme == "light") {
+      $("body").addClass("theme-dark");
+      window.sessionStorage.setItem("theme", "dark");
+    }
+  };
+
   $("#theme-switch").on("change", () => {
-    $("body").toggleClass("theme-dark");
+    changeTheme();
   });
 });
