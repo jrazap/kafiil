@@ -71,7 +71,7 @@ $(document).ready(() => {
       $("body").addClass("theme-dark");
       window.sessionStorage.setItem("theme", "dark");
       $("#theme-switch").attr("checked", true);
-    } else if (theme == null || theme == "dark") {
+    } else if (theme == null || theme == "light") {
       window.sessionStorage.setItem("theme", "light");
       $("#theme-switch").attr("checked", false);
     }
