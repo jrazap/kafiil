@@ -46,10 +46,6 @@ $(document).ready(() => {
       $(selectAllBtn).prop("checked", false);
     }
   });
-
-  // $("#adds-form, #review-form").on("submit", (e) => {
-  //   e.preventDefault();
-  // });
 });
 
 // ===============================================
@@ -68,7 +64,7 @@ $(document).ready(() => {
 // TOGGLE THEMES
 // ===============================================
 $(document).ready(() => {
-  $("#theme-switch").on("change", (e) => {
+  $("#theme-switch").on("change", () => {
     $("body").toggleClass("theme-dark");
   });
 });

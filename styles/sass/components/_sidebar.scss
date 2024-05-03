@@ -78,7 +78,7 @@
       }
     }
     .about {
-      @include font(500, 14px, var(--grey-800));
+      @include font(500, 14px, var(--sec-text-color));
       @include lines(3);
       @include media(sm) {
         text-align: center;
