@@ -64,9 +64,8 @@ $(document).ready(() => {
 // TOGGLE THEMES
 // ===============================================
 $(document).ready(() => {
-  let theme = sessionStorage.getItem("theme");
-
   let checkTheme = () => {
+    let theme = sessionStorage.getItem("theme");
     if (theme == "dark") {
       $("body").addClass("theme-dark");
       window.sessionStorage.setItem("theme", "dark");
@@ -79,6 +78,7 @@ $(document).ready(() => {
   checkTheme();
 
   let changeTheme = () => {
+    let theme = sessionStorage.getItem("theme");
     if (theme == "dark") {
       $("body").removeClass("theme-dark");
       window.sessionStorage.setItem("theme", "light");
@@ -90,5 +90,6 @@ $(document).ready(() => {
 
   $("#theme-switch").on("change", () => {
     changeTheme();
+    console.log("Hi");
   });
 });
