@@ -7,8 +7,8 @@
 // Global
 // ===============================================
 ::selection {
-  background: $mainColor;
-  color: $white;
+  background: var(--mainColor);
+  color: var(--white);
 }
 
 ::-webkit-scrollbar {
@@ -29,8 +29,8 @@ html{
 body {
   font-family: "Montserrat", sans-serif;
   min-block-size: 100vh;
-  background-color: $lightGray;
-  color: $black;  
+  background-color: var(--body-bg-color);
+  color: var(--text-color);  
 }
 
 ul {

@@ -10,13 +10,14 @@ header {
     min-block-size: 80px;
     position: absolute;
     top: 0;
-    background-color: $white;
+    background-color: var(--section-bg-color);
     padding-block: 1rem;
-    box-shadow: 0px 4px 26px 0px #c8c8c88c;
+    box-shadow: var(--headerBoxShadow);
     z-index: 1000;
 
     #close-nav {
       display: none;
+      cursor: pointer;
     }
     @include media(md) {
       display: block;
@@ -29,7 +30,7 @@ header {
         inset-block-start: 2rem;
         inset-inline-end: 2rem;
         font-size: 2rem;
-        color: $mainColor;
+        color: var(--mainColor);
       }
 
       &.active {
@@ -71,7 +72,7 @@ header {
             }
 
             p {
-              @include font(500, 1rem, $grey);
+              @include font(500, 1rem, var(--grey));
               text-transform: capitalize;
             }
           }
@@ -82,7 +83,7 @@ header {
                 @extend .filter-main-color;
               }
               p {
-                color: $mainColor;
+                color: var(--mainColor);
               }
             }
           }
@@ -102,8 +103,8 @@ header {
         }
         .badge {
           position: absolute;
-          background-color: $mainColor;
-          @include font(500, 0.8rem, $white);
+          background-color: var(--mainColor);
+          @include font(500, 0.8rem, var(--lightGray));
           @include size(1.2rem, 1.2rem);
           @include flex(center, center, row);
           border-radius: 50%;
@@ -116,7 +117,7 @@ header {
       .avatar {
         @include size(2.8rem, 2.8rem);
         border-radius: 50%;
-        border: 3px solid $mainColor;
+        border: 3px solid var(--mainColor);
 
         img {
           @include size(100%, 100%);
@@ -137,13 +138,13 @@ header {
           .user-info {
             @include flex(flex-start, center, row);
             padding-block-end: 0.5rem;
-            border-block-end: 1px solid $grey-50;
+            border-block-end: 1px solid var(--grey-50);
             gap: 1rem;
 
             img {
               @include size(2.8rem, 2.8rem);
               border-radius: 50%;
-              border: 3px solid $mainColor;
+              border: 3px solid var(--mainColor);
             }
 
             .info {
@@ -151,7 +152,7 @@ header {
                 @include font(700, 0.9rem, #1e1e1e);
               }
               .role {
-                @include font(400, 0.75rem, $grey);
+                @include font(400, 0.75rem, var(--grey));
               }
             }
           }
@@ -159,9 +160,9 @@ header {
           .menu-item {
             a {
               @include flex(flex-start, center, row);
-              @include font(500, 0.875rem, $grey-500);
+              @include font(500, 0.875rem, var(--grey-500));
               padding-block: 0.5rem;
-              border-block-end: 1px solid $grey-50;
+              border-block-end: 1px solid var(--grey-50);
               gap: 0.5rem;
 
               img {
@@ -177,7 +178,7 @@ header {
                   @extend .filter-main-color;
                 }
                 span {
-                  color: $mainColor;
+                  color: var(--mainColor);
                 }
               }
             }
@@ -190,7 +191,7 @@ header {
                 }
                 span {
                   text-transform: capitalize;
-                  color: $error-300;
+                  color: var(--error-300);
                 }
               }
             }
@@ -206,7 +207,7 @@ header {
               border-radius: 50%;
             }
             span {
-              @include font(500, 0.875rem, $grey-500);
+              @include font(500, 0.875rem, var(--grey-500));
             }
           }
 
@@ -218,10 +219,10 @@ header {
                 padding-inline-start: 0.2rem;
               }
               span {
-                @include font(500, 0.875rem, $black);
+                @include font(500, 0.875rem, var(--text-color));
                 font-family: "Cairo", sans-serif;
                 padding-inline-end: 0.2rem;
-                border-inline-end: 1px solid $grey;
+                border-inline-end: 1px solid var(--grey);
               }
             }
             &:hover {
@@ -230,7 +231,7 @@ header {
               }
               span {
                 text-transform: capitalize;
-                color: $mainColor;
+                color: var(--mainColor);
               }
             }
           }
@@ -246,10 +247,10 @@ header {
             width: 0;
             height: 0;
             &:checked + .slider {
-              background-color: $mainColor;
+              background-color: var(--mainColor);
             }
             &:focus + .slider {
-              box-shadow: 0 0 1px $mainColor;
+              box-shadow: 0 0 1px var(--mainColor);
             }
             &:checked + .slider {
               &:before {
@@ -295,7 +296,7 @@ header {
   .md-navbar {
     @include size(100%, auto);
     min-block-size: 80px;
-    background-color: $white;
+    background-color: var(--section-bg-color);
     padding-block: 1rem;
     box-shadow: 0px 4px 26px 0px #c8c8c88c;
     display: none;
@@ -306,7 +307,8 @@ header {
 
       #bars {
         font-size: 2rem;
-        color: $mainColor;
+        color: var(--mainColor);
+        cursor: pointer;
       }
     }
 
@@ -346,7 +348,7 @@ header {
 
             &:hover,
             &.active {
-              background-color: $mainColor;
+              background-color: var(--mainColor);
               @include size(100%, auto);
               border-radius: 0.5rem;
 
@@ -357,7 +359,7 @@ header {
                     contrast(100%);
                 }
                 p {
-                  color: $white;
+                  color: var(--section-bg-color);
                 }
               }
             }

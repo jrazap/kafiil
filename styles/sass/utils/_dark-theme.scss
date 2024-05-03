@@ -1,0 +1,15 @@
+body {
+  &.theme-dark {
+      --text-color: var(--lightGray);
+      --sec-text-color:var(--lightGray);
+    --body-bg-color: var(--gray-25);
+    --section-bg-color: var(--gray-0);
+    --box-bg-color: var(--gray-10);
+    --headerBoxShadow: 0px 4px 26px 0px rgba(0, 0, 0, 0.2);
+    --action-bg-color: var(--gray-10);
+    --action-bg-color-hover: var(--gray-10);
+    --input-bg-color: var(--gray-10);
+    --input-border-color: var(--mainColor);
+    --border-color: var(--gray-0);
+  }
+}

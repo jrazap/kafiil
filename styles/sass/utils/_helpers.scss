@@ -1,5 +1,5 @@
 .title {
-  @include font(600, 1.2rem, $black);
+  @include font(600, 1.2rem, var(--text-color));
   margin-block-end: 1rem;
   text-transform: capitalize;
   @include media(md) {
@@ -8,21 +8,25 @@
 }
 
 .shadow-box {
-  background-color: $white;
+  background-color: var(--section-bg-color);
   padding: 1rem !important;
   border-radius: 1rem;
-  box-shadow: $boxShadow;
+  box-shadow: var(--boxShadow);
 }
 
 .form-control {
+  @include font(400, 1rem, var(--text-color));
   @include size(100%, auto);
   @include none;
-  background-color: $grey-50;
+  background-color: var(--box-bg-color);
   padding: 1rem;
+  border: 1px solid transparent;
   border-radius: 1rem;
   &:focus {
-    background-color: $grey-50;
+    @include font(400, 1rem, var(--text-color));
+    background-color: var(--box-bg-color);
     @include none;
+    border: 1px solid var(--input-border-color);
   }
   &::placeholder {
     font-size: 1rem;
@@ -43,13 +47,13 @@
 // Colors
 // ===============================================
 .bg-grey-50 {
-  background-color: $grey-200;
+  background-color: var(--grey-200);
 }
 
 .fa-star {
-  color: $grey-200;
+  color: var(--grey-200);
   &.gold {
-    color: $gold;
+    color: var(--gold);
   }
 }
 
@@ -58,17 +62,17 @@
 // ===============================================
 .btn {
   @include size(100%, 2.5rem);
-  @include font(500, 1rem, $white);
+  @include font(500, 1rem, var(--lightGray));
   @include flex(center, center, row);
   @include none;
   border-radius: 0.25rem;
-  background-color: $mainColor;
+  background-color: var(--mainColor);
   &:focus {
     @include none;
   }
   &:hover {
-    color: $white;
-    background-color: $theme-color-hover;
+    color: var(--lightGray);
+    background-color: var(--theme-color-hover);
   }
   @include media(sm) {
     font-size: 0.8rem;

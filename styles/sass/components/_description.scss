@@ -1,7 +1,7 @@
 .description {
   margin-block-end: 1.5rem;
   .text {
-    @include font(500, 1rem, $grey-800);
+    @include font(500, 1rem, var(--sec-text-color));
     @include media(sm) {
       font-size: 0.8rem;
     }

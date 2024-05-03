@@ -38,13 +38,13 @@
             }
 
             & + label {
-              color: $mainColor;
+              color: var(--mainColor);
             }
           }
         }
 
         label {
-          @include font(500, 1rem, $grey-300);
+          @include font(500, 1rem, var(--grey-300));
           cursor: pointer;
         }
       }
@@ -67,7 +67,7 @@
             position: absolute;
             inset-inline-start: 0;
             inset-block-start: 0.5rem;
-            border: 2px solid $grey-300;
+            border: 2px solid var(--grey-300);
             border-radius: 50%;
             cursor: pointer;
           }
@@ -76,7 +76,7 @@
             &::after {
               background-image: url("../../assets/icons/checked.svg");
               background-size: cover;
-              border-color: $white;
+              border-color: var(--section-bg-color);
             }
           }
         }
@@ -93,8 +93,8 @@
             @include flex(flex-start, center, row);
             gap: 0.5rem;
             .badge-item {
-              @include font(500, 1rem, $mainColor);
-              background-color: $primary-100;
+              @include font(500, 1rem, var(--mainColor));
+              background-color: var(--box-bg-color);
               padding: 10px 5px 10px 5px;
               border-radius: 0.5rem;
               @include media(sm) {
@@ -120,7 +120,7 @@
           @include flex(space-between, center, row);
           gap: 1rem;
           .text-box {
-            background-color: $grey-50;
+            background-color: var(--input-bg-color);
             @include flex(center, center, row);
             @include size(100%, 2.5rem);
           }

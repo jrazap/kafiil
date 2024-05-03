@@ -2,14 +2,14 @@
 // Footer
 // ===============================================
 footer {
-  border-block-start: 1px solid $grey-200;
+  border-block-start: 1px solid var(--border-color);
   .container {
     @include flex(space-between, center, row);
     padding-block: 1rem;
     .copyrights {
-      @include font(500, 1rem, $black);
+      @include font(500, 1rem, var(--text-color));
       a {
-        color: $mainColor;
+        color: var(--mainColor);
       }
     }
     .logo {

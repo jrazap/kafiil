@@ -15,7 +15,7 @@
             content: "";
             @include size(0.5rem, 0.5rem);
             position: absolute;
-            background-color: $mainColor;
+            background-color: var(--mainColor);
             border-radius: 50%;
             transform: translate(-0.5rem, 1.8rem);
           }
@@ -26,7 +26,7 @@
         @include flex(center, center, row);
         gap: 0.2rem;
         p {
-          @include font(600, 1rem, $black);
+          @include font(600, 1rem, var(--text-color));
         }
         img {
           @include size(1rem, 1rem);
@@ -39,12 +39,12 @@
         gap: 0.5rem;
 
         i {
-          color: $grey-400;
+          color: var(--grey-400);
           font-size: 1rem;
         }
 
         span {
-          @include font(400, 0.875rem, $grey-400);
+          @include font(400, 0.875rem, var(--grey-400));
         }
       }
 
@@ -52,7 +52,7 @@
         @include flex(center, center, row);
         gap: 0.2rem;
         span {
-          @include font(400, 0.875rem, $grey-400);
+          @include font(400, 0.875rem, var(--grey-400));
           margin-inline-start: 0.5rem;
         }
       }
@@ -63,14 +63,12 @@
 
         .action-btn {
           @include flex(center, center, row);
-          background-color: $grey-50;
+          background-color: var(--action-bg-color);
           border-radius: 0.5rem;
           @include size(2.5rem, 2.5rem);
           &:hover {
-            background-color: $grey-400;
-            img {
-              @extend .filter-white;
-            }
+            background-color: var(--action-bg-color-hover);
+            opacity: 0.7;
           }
 
           img {
@@ -80,7 +78,7 @@
       }
     }
     .about {
-      @include font(500, 14px, $grey-800);
+      @include font(500, 14px, var(--grey-800));
       @include lines(3);
       @include media(sm) {
         text-align: center;
@@ -92,7 +90,7 @@
     ul {
       .item {
         @include flex(space-between, center, row);
-        @include font(500, 0.875rem, $black);
+        @include font(500, 0.875rem, var(--text-color));
         text-transform: capitalize;
 
         .item-key {
@@ -139,7 +137,7 @@
         }
         i {
           font-size: 1rem;
-          color: $white;
+          color: var(--white);
           &.fa-copy {
             color: #4f4f4f;
           }
@@ -157,10 +155,10 @@
         margin-block-end: 0;
       }
       a {
-        @include font(500, 14px, $grey-300);
+        @include font(500, 14px, var(--grey-300));
         cursor: pointer;
         &:hover {
-          color: $mainColor;
+          color: var(--mainColor);
         }
       }
     }
@@ -185,7 +183,7 @@
         .details {
           padding: 1rem;
           .item-title {
-            @include font(600, 0.75rem, $black);
+            @include font(600, 0.75rem, var(--text-color));
             @include lines(3);
             margin-block-end: 1rem;
           }
@@ -201,7 +199,7 @@
                   font-size: 0.5rem;
                 }
                 span {
-                  @include font(400, 0.7rem, $grey-500);
+                  @include font(400, 0.7rem, var(--grey-500));
                 }
               }
               .price {
@@ -212,7 +210,7 @@
                   object-fit: contain;
                 }
                 span {
-                  @include font(600, 0.7rem, $black);
+                  @include font(600, 0.7rem, var(--text-color));
                 }
               }
             }

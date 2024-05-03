@@ -63,3 +63,12 @@ $(document).ready(() => {
     $(e.target).parent().toggleClass("liked");
   });
 });
+
+// ===============================================
+// TOGGLE THEMES
+// ===============================================
+$(document).ready(() => {
+  $("#theme-switch").on("change", (e) => {
+    $("body").toggleClass("theme-dark");
+  });
+});

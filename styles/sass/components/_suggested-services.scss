@@ -12,7 +12,7 @@
         position: absolute;
         inset-block-start: 1rem;
         inset-inline-start: 1rem;
-        background-color: $white;
+        background-color: var(--section-bg-color);
         box-shadow: 0px 3px 3px 1px #2020200d;
         border-radius: 50%;
         cursor: pointer;
@@ -38,7 +38,7 @@
       .details {
         padding: 1rem;
         .item-title {
-          @include font(600, 1rem, $black);
+          @include font(600, 1rem, var(--text-color));
           @include lines(2);
           margin-block-end: 0.5rem;
         }
@@ -49,10 +49,10 @@
 
           .icon {
             .fa-shopping-cart {
-              color: $grey-400;
+              color: var(--grey-400);
             }
             span {
-              @include font(600, 0.875rem, $grey-400);
+              @include font(600, 0.875rem, var(--grey-400));
             }
           }
         }
@@ -69,12 +69,12 @@
               }
             }
             .name {
-              @include font(600, 12px, $black);
+              @include font(600, 12px, var(--text-color));
             }
           }
 
           .price {
-            @include font(600, 1rem, $black);
+            @include font(600, 1rem, var(--text-color));
             @include flex(flex-end, center, row);
             gap: 0.5rem;
           }

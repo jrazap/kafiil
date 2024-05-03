@@ -1,7 +1,7 @@
 .slider-container {
   .slider-title {
     .sub-title {
-      @include font(500, 18px, $grey-400);
+      @include font(500, 18px, var(--grey-400));
     }
 
     .title {
@@ -12,12 +12,12 @@
     .rating {
       @include flex(space-between, center, row);
       .stars {
-        color: $grey-200;
+        color: var(--grey-200);
         .gold {
-          color: $gold;
+          color: var(--gold);
         }
         span {
-          @include font(400, 1rem, $grey-500);
+          @include font(400, 1rem, var(--grey-500));
         }
       }
 
@@ -48,15 +48,15 @@
         width: 12px;
         height: 12px;
         opacity: 1;
-        background: $grey-200;
+        background: var(--grey-200);
         &.is-selected {
-          background: $mainColor;
+          background: var(--mainColor);
         }
       }
     }
 
     .flickity-button {
-      background: $white;
+      background: var(--section-bg-color);
 
       &.flickity-prev-next-button {
         @include flex(center, center, row);
@@ -83,14 +83,14 @@
       .flickity-button-icon {
         position: unset;
         @include size(1.5rem, 1.5rem);
-        fill: $mainColor;
+        fill: var(--mainColor);
       }
 
       &:disabled {
         opacity: 1;
         background-color: rgba(255, 255, 255, 0.3);
         .flickity-button-icon {
-          fill: $white;
+          fill: var(--section-bg-color);
         }
       }
     }
